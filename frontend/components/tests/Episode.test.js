@@ -47,10 +47,9 @@ describe("Episode component", () => {
     // ❗ Use querySelector to select the image by its src attribute
     expect(
       document.querySelector(
-        'img[src="https://i.ibb.co/2FsfXqM/stranger-things.png]"'
+        'img[src="https://i.ibb.co/2FsfXqM/stranger-things.png"]'
       )
     ).toBeInTheDocument();
-    screen.debug();
     // 👉 TASK: check that the "generic episode image" alt text is present
     screen.getByAltText("generic episode image");
     // 👉 TASK: rerender the component passing an undefined episode
@@ -58,5 +57,6 @@ describe("Episode component", () => {
     rerender(<Episode />);
     // 👉 TASK: check that the "Loading episode..." text is present
     screen.getByText("Loading episode...");
+    // screen.debug();
   });
 });
